@@ -1,12 +1,12 @@
 import React from "react";
 import Header from "./Header";
-import DayControl from "./DayControl";
+import MarketSearchForm from "./MarketSearchForm";
 
 function App(){
   return ( 
     <React.Fragment>
       <Header />
-      <DayControl />
+      <MarketSearchForm />
     </React.Fragment>
   );
 }

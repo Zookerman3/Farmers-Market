@@ -1,5 +1,4 @@
 import React from "react";
-import MarketDay from "./DayOfWeek";
 
 
 const marketSchedule = [
@@ -41,17 +40,12 @@ const marketSchedule = [
   }
 ];
 
-function DayOfWeek() {
+function DayOfWeek(props) {
   return (
     <React.Fragment>
-      <hr />
-      {marketSchedule.map((product, index) =>
-        <MarketDay day={product.day}
-          location={product.location}
-          hours={product.hours}
-          booth={product.booth}
-          key={index} />
-      )}
+      <h3>Farmers Market Schedule for {marketSchedule[props.selectedDay].day}s</h3>
+      <p>Come see on  {marketSchedule[props.selectedDay].day}s at {marketSchedule[props.selectedDay].location} at booth {marketSchedule[props.selectedDay].booth}.  We are open {marketSchedule[props.selectedDay].hours}</p>
+      {marketSchedule[props.selectedDay].selection}
     </React.Fragment>
   );
 }

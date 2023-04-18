@@ -1,10 +1,9 @@
 import React from "react";
-import ticketsImage from "../img/tickets-image.png";
 
 function Header() {
     return (
         <React.Fragment>
-      <h1>Help Queue</h1>
+      <h1>Market Schedule</h1>
     </React.Fragment>
     );
 }

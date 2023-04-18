@@ -1,6 +1,8 @@
 import React from 'react';
-import NewTicketForm from './NewTicketForm';
+import MarketSearchForm from './MarketSearchForm';
 import DayList from './DayList';
+import MonthList from './MonthList';
+
 
 class TicketControl extends React.Component {
 
@@ -23,11 +25,14 @@ class TicketControl extends React.Component {
         let currentlyVisibleState = null;
         let buttonText = null; // new code
         if (this.state.formVisibleOnPage) {
-            currentlyVisibleState = <NewTicketForm />;
-            buttonText = "Return to Day List"; // new code
+            currentlyVisibleState = <React.Fragment>
+                <DayList />
+                <MonthList />
+            </React.Fragment>
+            buttonText = "Back to Search"; // new code
         } else {
-            currentlyVisibleState = <DayList />;
-            buttonText = "Add Market Stop"; // new code
+            currentlyVisibleState = <MarketSearchForm />;
+            buttonText = "Show Weekly Schedule"; // new code
         }
         return (
             <React.Fragment>
