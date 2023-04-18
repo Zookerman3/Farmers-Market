@@ -1,6 +1,6 @@
 import React from 'react';
 import NewTicketForm from './NewTicketForm';
-import TicketList from './TicketList';
+import DayList from './DayList';
 
 class TicketControl extends React.Component {
 
@@ -15,19 +15,19 @@ class TicketControl extends React.Component {
 
     handleClick = () => {
         this.setState(prevState => ({
-          formVisibleOnPage: !prevState.formVisibleOnPage
+            formVisibleOnPage: !prevState.formVisibleOnPage
         }));
-      }
+    }
 
     render() {
         let currentlyVisibleState = null;
         let buttonText = null; // new code
         if (this.state.formVisibleOnPage) {
             currentlyVisibleState = <NewTicketForm />;
-            buttonText = "Return to Ticket List"; // new code
+            buttonText = "Return to Day List"; // new code
         } else {
-            currentlyVisibleState = <TicketList />;
-            buttonText = "Add Ticket"; // new code
+            currentlyVisibleState = <DayList />;
+            buttonText = "Add Market Stop"; // new code
         }
         return (
             <React.Fragment>

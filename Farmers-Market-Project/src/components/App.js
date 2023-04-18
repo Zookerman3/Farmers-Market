@@ -1,12 +1,12 @@
 import React from "react";
 import Header from "./Header";
-import TicketControl from "./TicketList";
+import DayControl from "./DayControl";
 
 function App(){
   return ( 
     <React.Fragment>
       <Header />
-      <TicketControl />
+      <DayControl />
     </React.Fragment>
   );
 }
